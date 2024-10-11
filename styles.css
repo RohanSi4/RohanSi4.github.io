@@ -1,4 +1,4 @@
-/* General reset */
+/* Basic reset for margin and padding */
 * {
     margin: 0;
     padding: 0;
@@ -58,105 +58,57 @@ body {
     color: #3498db;
 }
 
-/* Hero Section */
-.hero-section {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: white;
-    background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradient background */
+.navbar-scrolled {
+    background-color: #34495e;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
 }
 
-.hero-content h1 {
-    font-size: 56px;
+/* Resume Section */
+.resume-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.resume-section h1 {
+    font-size: 48px;
     margin-bottom: 20px;
     font-weight: bold;
+    color: #2c3e50;
 }
 
-.hero-content p {
-    font-size: 20px;
+.resume-section p {
+    font-size: 18px;
     margin-bottom: 30px;
 }
 
-.hero-content a {
-    margin-right: 10px;
-}
-
-/* Updated Hero Image - Center and Larger */
-.hero-image {
-    display: flex;
-    justify-content: center;
-    margin-top: 30px;
-}
-
-.hero-image img {
-    width: 400px;  /* Increased the width to make the image larger */
-    height: 400px; /* Increased the height to match */
-    object-fit: cover;
-    border-radius: 50%; /* Keep the image round */
-    border: 6px solid #fff; /* Add a white border */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
-}
-
-/* Button Styling */
-.btn {
-    background-color: #fff;
-    color: #3498db;
+.resume-section .btn {
+    background-color: #3498db;
+    color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
     transition: background-color 0.3s ease;
-    font-weight: bold;
-}
-
-.btn:hover {
-    background-color: #2980b9;
-    color: white;
-}
-
-.scroll-link {
-    text-decoration: none;
-    font-size: 16px;
-    color: #fff;
-    margin-top: 10px;
     display: inline-block;
-}
-
-/* About and Other Sections */
-.about-section, .projects-section, .contact-section {
-    padding: 60px 20px;
-    text-align: center;
-}
-
-.about-section {
-    background-color: #ecf0f1;
-}
-
-.projects-section {
-    background-color: #f4f4f9;
-}
-
-.project-grid {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-.project {
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 30%;
     margin-bottom: 20px;
 }
 
-/* Contact Section */
-.contact-section {
-    background-color: #ecf0f1;
+.resume-section .btn:hover {
+    background-color: #2980b9;
+}
+
+.resume-image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-image img {
+    max-width: 80%; /* Limit the width of the image to 80% of the container */
+    height: auto; /* Maintain the aspect ratio */
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
 }
 
 /* Footer Styles */
