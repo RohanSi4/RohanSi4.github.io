@@ -217,7 +217,7 @@ body {
 }
 
 .resume-image img {
-    max-width: 60%; /* Limit the width of the image to 60% of the container */
+    max-width: 50%; /* Limit the width of the image to 50% of the container */
     height: auto; /* Maintain the aspect ratio */
     border: 2px solid #ccc;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
