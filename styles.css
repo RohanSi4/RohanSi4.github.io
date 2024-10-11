@@ -67,74 +67,71 @@ body {
 .hero-section {
     height: 100vh;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     color: white;
     text-align: center;
-    background: url('background-image.jpg') no-repeat center center/cover;
-}
-
-.hero-content {
-    max-width: 600px;
-    margin-right: 30px;
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradient for the header */
 }
 
 .hero-content h1 {
-    font-size: 48px;
+    font-size: 56px;
     margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
 }
 
 .hero-content p {
-    font-size: 18px;
+    font-size: 20px;
     margin-bottom: 30px;
 }
 
-.btn {
-    background-color: #3498db;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    transition: background-color 0.3s ease;
-    display: inline-block;
+.hero-content a {
     margin-right: 10px;
 }
 
-.btn:hover {
-    background-color: #2980b9;
-}
-
-.scroll-link {
-    text-decoration: none;
-    font-size: 16px;
-    color: #3498db;
-    margin-top: 10px;
-    display: inline-block;
-}
-
-.scroll-link:hover {
-    color: #2980b9;
-}
-
-/* Image Styling */
+/* Hero Image - Center and Larger */
 .hero-image {
-    width: 250px;
-    height: 250px;
+    width: 350px;
+    height: 350px;
+    margin-top: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
     overflow: hidden;
+    border: 5px solid #fff; /* Border for the image */
 }
 
 .hero-image img {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 50%;
+}
+
+/* Button Styling */
+.btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.scroll-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
 }
 
 /* Section Styles */
@@ -170,10 +167,66 @@ body {
     background-color: #ecf0f1;
 }
 
+/* Resume Section */
+.resume-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.resume-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.resume-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.resume-section .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+}
+
+.resume-section .btn:hover {
+    background-color: #2980b9;
+}
+
+.resume-image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-image img {
+    max-width: 100%;
+    height: auto;
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+}
+
 /* Footer Styles */
 .footer {
     background-color: #2c3e50;
     color: #fff;
     text-align: center;
     padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #3498db;
 }
