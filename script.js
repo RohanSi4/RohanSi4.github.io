@@ -1,66 +1,131 @@
-// Smooth Scrolling for Navigation
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-        e.preventDefault();
-        document.querySelector(this.getAttribute('href')).scrollIntoView({
-            behavior: 'smooth',
-            block: 'start'
-        });
-    });
-});
+'use strict';
 
-// Navbar Scroll Animation - Change background on scroll
-window.addEventListener('scroll', function() {
-    const navbar = document.querySelector('.navbar');
-    if (window.scrollY > 50) {
-        navbar.classList.add('navbar-scrolled');
-    } else {
-        navbar.classList.remove('navbar-scrolled');
-    }
-});
-
-// Scroll-to-Top Button
-const scrollToTopButton = document.createElement('div');
-scrollToTopButton.innerHTML = "&#8679;";
-scrollToTopButton.classList.add('scroll-to-top');
-document.body.appendChild(scrollToTopButton);
-
-window.addEventListener('scroll', () => {
-    if (window.scrollY > 300) {
-        scrollToTopButton.classList.add('visible');
-    } else {
-        scrollToTopButton.classList.remove('visible');
-    }
-});
-
-scrollToTopButton.addEventListener('click', () => {
-    window.scrollTo({
-        top: 0,
-        behavior: 'smooth'
-    });
-});
-
-// Fade-In Animation for Hero Section
-window.addEventListener('load', () => {
-    const heroContent = document.querySelector('.hero-content');
-    heroContent.classList.add('fade-in');
-});
-
-// Fade-In Sections as they scroll into view
-const faders = document.querySelectorAll('.fade-in-section');
-const options = {
-    threshold: 0.1,
-    rootMargin: "0px 0px -50px 0px"
+// Element toggle function
+const elementToggleFunc = function (elem) { 
+  elem.classList.toggle("active"); 
 };
 
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (!entry.isIntersecting) return;
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-    });
-}, options);
+// Sidebar variables
+const sidebar = document.querySelector("[data-sidebar]");
+const sidebarBtn = document.querySelector("[data-sidebar-btn]");
 
-faders.forEach(fader => {
-    appearOnScroll.observe(fader);
+// Sidebar toggle functionality for mobile
+sidebarBtn.addEventListener("click", function () { 
+  elementToggleFunc(sidebar); 
+});
+
+// Testimonials variables
+const testimonialsItem = document.querySelectorAll("[data-testimonials-item]");
+const modalContainer = document.querySelector("[data-modal-container]");
+const modalCloseBtn = document.querySelector("[data-modal-close-btn]");
+const overlay = document.querySelector("[data-overlay]");
+
+// Modal variables
+const modalImg = document.querySelector("[data-modal-img]");
+const modalTitle = document.querySelector("[data-modal-title]");
+const modalText = document.querySelector("[data-modal-text]");
+
+// Modal toggle function
+const testimonialsModalFunc = function () {
+  modalContainer.classList.toggle("active");
+  overlay.classList.toggle("active");
+};
+
+// Add click event to all modal items
+testimonialsItem.forEach(item => {
+  item.addEventListener("click", function () {
+    modalImg.src = this.querySelector("[data-testimonials-avatar]").src;
+    modalImg.alt = this.querySelector("[data-testimonials-avatar]").alt;
+    modalTitle.innerHTML = this.querySelector("[data-testimonials-title]").innerHTML;
+    modalText.innerHTML = this.querySelector("[data-testimonials-text]").innerHTML;
+    testimonialsModalFunc();
+  });
+});
+
+// Add click event to modal close button and overlay
+modalCloseBtn.addEventListener("click", testimonialsModalFunc);
+overlay.addEventListener("click", testimonialsModalFunc);
+
+// Custom select variables
+const select = document.querySelector("[data-select]");
+const selectItems = document.querySelectorAll("[data-select-item]");
+const selectValue = document.querySelector("[data-select-value]");
+const filterBtn = document.querySelectorAll("[data-filter-btn]");
+
+select.addEventListener("click", function () { 
+  elementToggleFunc(this); 
+});
+
+// Add event in all select items
+selectItems.forEach(item => {
+  item.addEventListener("click", function () {
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    elementToggleFunc(select);
+    filterFunc(selectedValue);
+  });
+});
+
+// Filter variables
+const filterItems = document.querySelectorAll("[data-filter-item]");
+
+const filterFunc = function (selectedValue) {
+  filterItems.forEach(item => {
+    if (selectedValue === "all" || selectedValue === item.dataset.category) {
+      item.classList.add("active");
+    } else {
+      item.classList.remove("active");
+    }
+  });
+};
+
+// Add event in all filter button items for large screen
+let lastClickedBtn = filterBtn[0];
+
+filterBtn.forEach(btn => {
+  btn.addEventListener("click", function () {
+    let selectedValue = this.innerText.toLowerCase();
+    selectValue.innerText = this.innerText;
+    filterFunc(selectedValue);
+
+    lastClickedBtn.classList.remove("active");
+    this.classList.add("active");
+    lastClickedBtn = this;
+  });
+});
+
+// Contact form variables
+const form = document.querySelector("[data-form]");
+const formInputs = document.querySelectorAll("[data-form-input]");
+const formBtn = document.querySelector("[data-form-btn]");
+
+// Add event to all form input fields
+formInputs.forEach(input => {
+  input.addEventListener("input", function () {
+    if (form.checkValidity()) {
+      formBtn.removeAttribute("disabled");
+    } else {
+      formBtn.setAttribute("disabled", "");
+    }
+  });
+});
+
+// Page navigation variables
+const navigationLinks = document.querySelectorAll("[data-nav-link]");
+const pages = document.querySelectorAll("[data-page]");
+
+// Add event to all nav links
+navigationLinks.forEach(link => {
+  link.addEventListener("click", function () {
+    pages.forEach(page => {
+      if (this.innerHTML.toLowerCase() === page.dataset.page) {
+        page.classList.add("active");
+        link.classList.add("active");
+        window.scrollTo(0, 0);
+      } else {
+        page.classList.remove("active");
+        navigationLinks.forEach(navLink => navLink.classList.remove("active"));
+      }
+    });
+  });
 });

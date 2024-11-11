@@ -1,41 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Resume - Rohan Singh</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Singh - Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="index.html" class="logo">Rohan Singh</a>
-            <ul class="nav-links">
-                <li><a href="index.html">Home</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Main Section -->
+  <main>
 
-    <!-- Resume Section -->
-    <section class="resume-section">
-        <div class="container">
-            <h1>My Resume</h1>
-            <p>Below is a copy of my resume. You can also <a href="rohanresume.pdf" class="btn">Download PDF</a> for a high-resolution version.</p>
-            <div class="resume-image">
-                <img src="rohanresumeLIS.jpg" alt="Rohan Singh's Resume">
+    <!-- Sidebar -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Rohan Singh" width="80">
+        </figure>
+
+        <div class="info-content">
+          <h1 class="name" title="Rohan Singh">Rohan Singh</h1>
+          <p class="title">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-        </div>
-    </section>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:Rohan.singh04@outlook.com" class="contact-link">Rohan.singh04@outlook.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12403867502" class="contact-link">(240) 386-7502</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Charlottesville, Virginia, USA</address>
+            </div>
+          </li>
+        </ul>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <a href="https://www.linkedin.com/in/rohansingh4/">Visit My LinkedIn!</a>
-        </div>
-    </footer>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/rohansingh4/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://rohansi4.github.io/" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- Main Content -->
+    <div class="main-content">
+
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+        </ul>
+      </nav>
+
+      <!-- About Section -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            I am a Software Engineer with a background in Computer Science and a minor in Data Science. Currently, I am a student at the University of Virginia, actively involved in organizations like Technology Strategy Group and HooHacks.
+          </p>
+          <p>
+            I specialize in web development, AI, and data science, focusing on innovative solutions to technical challenges. With previous experience at Cubic Corporation and USCHO, I have a well-rounded skill set in both backend and frontend technologies.
+          </p>
+        </section>
+      </article>
+
+      <!-- Resume Section -->
+      <article class="resume" data-page="resume">
+        <header>
+          <h2 class="h2 article-title">Resume</h2>
+        </header>
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="book-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Education</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">University of Virginia</h4>
+              <span>2024 — Expected May 2026</span>
+              <p class="timeline-text">
+                B.S. in Computer Science with a minor in Data Science, GPA: 4.0/4.0.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">University of Wisconsin-Madison</h4>
+              <span>2021 — May 2024</span>
+              <p class="timeline-text">
+                B.S. in Computer Science, GPA: 3.73/4.0.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="timeline">
+          <div class="title-wrapper">
+            <div class="icon-box">
+              <ion-icon name="briefcase-outline"></ion-icon>
+            </div>
+            <h3 class="h3">Experience</h3>
+          </div>
+          <ol class="timeline-list">
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Software Engineer Intern</h4>
+              <span>Cubic Corporation, Jun. 2024 — Aug. 2024</span>
+              <p class="timeline-text">
+                Developed a user guide website with Docusaurus and React, improved UX, and optimized deployment pipelines.
+              </p>
+            </li>
+            <li class="timeline-item">
+              <h4 class="h4 timeline-item-title">Fullstack Software Engineering Intern</h4>
+              <span>USCHO, Jan. 2024 — May 2024</span>
+              <p class="timeline-text">
+                Enhanced UI for a high-traffic website, contributing to both frontend and backend development.
+              </p>
+            </li>
+          </ol>
+        </section>
+
+        <section class="skill">
+          <h3 class="h3 skills-title">Technical Skills</h3>
+          <ul class="skills-list content-card">
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">Python, JavaScript, SQL</h5>
+                <data value="90">90%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 90%;"></div>
+              </div>
+            </li>
+            <li class="skills-item">
+              <div class="title-wrapper">
+                <h5 class="h5">React, Node.js, Docker</h5>
+                <data value="85">85%</data>
+              </div>
+              <div class="skill-progress-bg">
+                <div class="skill-progress-fill" style="width: 85%;"></div>
+              </div>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Portfolio Section -->
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item active" data-filter-item data-category="AI">
+              <a href="#">
+                <h3 class="project-title">AI-Powered Stock Predictor</h3>
+                <p class="project-category">AI and Machine Learning</p>
+              </a>
+            </li>
+            <li class="project-item active" data-filter-item data-category="Web Development">
+              <a href="#">
+                <h3 class="project-title">BusWatch</h3>
+                <p class="project-category">Web Development</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Contact Section -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" class="form-input" placeholder="Full name" required data-form-input>
+              <input type="email" name="email" class="form-input" placeholder="Email address" required data-form-input>
+            </div>
+            <textarea name="message" class="form-input" placeholder="Your Message" required data-form-input></textarea>
+            <button class="form-btn" type="submit" disabled data-form-btn>
+              <ion-icon name="paper-plane"></ion-icon>
+              <span>Send Message</span>
+            </button>
+          </form>
+        </section>
+      </article>
+
+    </div>
+  </main>
+
+  <!-- Custom JS Link -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
 </body>
 </html>
