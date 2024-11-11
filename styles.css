@@ -1,213 +1,225 @@
-/*-----------------------------------*\
-  #style.css
-\*-----------------------------------*/
-
-
-/**
- * Custom Property
- */
-
- :root {
-    --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
-    --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
-    --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
-    --jet: hsl(0, 0%, 22%);
-    --onyx: hsl(240, 1%, 17%);
-    --smoky-black: hsl(0, 0%, 7%);
-    --white-1: hsl(0, 0%, 100%);
-    --orange-yellow-crayola: hsl(45, 100%, 72%);
-    --light-gray: hsl(0, 0%, 84%);
-    --ff-poppins: 'Poppins', sans-serif;
-    --fs-1: 24px;
-    --fs-2: 18px;
-    --fs-3: 17px;
-    --fs-4: 16px;
-    --fs-5: 15px;
-    --fw-300: 300;
-    --fw-500: 500;
-    --shadow-1: -4px 8px 24px hsla(0, 0%, 0%, 0.25);
-    --transition-1: 0.25s ease;
-  }
-  
-  *,
-  *::before,
-  *::after {
+/* Basic reset for margin and padding */
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
-  
-  a {
+}
+
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333;
+    line-height: 1.6;
+    background-color: #f4f4f9;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* Navigation Styles */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2c3e50;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.navbar .logo {
+    color: #fff;
+    font-size: 24px;
+    text-transform: uppercase;
+}
+
+.navbar ul {
+    list-style-type: none;
+}
+
+.navbar ul li {
+    display: inline;
+    margin-left: 20px;
+}
+
+.navbar ul li a {
+    color: #fff;
     text-decoration: none;
-    color: inherit;
-  }
-  
-  body {
-    font-family: var(--ff-poppins);
-    background: var(--smoky-black);
-  }
-  
-  /*-----------------------------------*\
-    #LAYOUTS
-  \*-----------------------------------*/
-  
-  main {
+    font-size: 18px;
+}
+
+.navbar ul li a:hover {
+    color: #3498db;
+}
+
+/* Hero Section */
+.hero-section {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 1rem;
-    padding: 1rem;
-  }
-  
-  .sidebar,
-  article {
-    background: var(--eerie-black-2);
-    border: 1px solid var(--jet);
-    border-radius: 10px;
-    padding: 1rem;
-    box-shadow: var(--shadow-1);
-  }
-  
-  .separator {
-    width: 100%;
-    height: 1px;
-    background: var(--jet);
-    margin: 1rem 0;
-  }
-  
-  .icon-box {
-    background: var(--onyx);
-    width: 30px;
-    height: 30px;
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
     justify-content: center;
-    color: var(--orange-yellow-crayola);
-  }
-  
-  .navbar {
+    align-items: center;
+    color: white;
+    text-align: center;
+    background: linear-gradient(135deg, #3498db, #2c3e50); /* Gradient for the header */
+}
+
+.hero-content h1 {
+    font-size: 56px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.hero-content p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero-content a {
+    margin-right: 10px;
+}
+
+/* Hero Image - Center and Circular */
+.hero-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.hero-image img {
+    width: 300px;  /* Adjusted width */
+    height: 300px; /* Adjusted height */
+    object-fit: cover;
+    border-radius: 50%; /* Keep the image round */
+    border: 6px solid #fff; /* Add a white border */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add a shadow for depth */
+}
+
+/* Button Styling */
+.btn {
+    background-color: #fff;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    font-weight: bold;
+}
+
+.btn:hover {
+    background-color: #2980b9;
+    color: white;
+}
+
+.scroll-link {
+    text-decoration: none;
+    font-size: 16px;
+    color: #fff;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+/* Section Styles */
+.about-section, .projects-section, .contact-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.about-section {
+    background-color: #ecf0f1;
+}
+
+.projects-section {
+    background-color: #f4f4f9;
+}
+
+.project-grid {
     display: flex;
     justify-content: space-around;
-    background: hsla(240, 1%, 17%, 0.75);
-    padding: 1rem;
-    border-radius: 12px 12px 0 0;
-    box-shadow: var(--shadow-1);
-  }
-  
-  .navbar-link {
-    color: var(--light-gray);
-    padding: 0.5rem 1rem;
-    font-size: var(--fs-5);
-    transition: color var(--transition-1);
-  }
-  
-  .navbar-link.active,
-  .navbar-link:hover {
-    color: var(--orange-yellow-crayola);
-  }
-  
-  /*-----------------------------------*\
-    #TEXT STYLES
-  \*-----------------------------------*/
-  
-  h1,
-  h2,
-  h3,
-  h4,
-  h5 {
-    color: var(--white-1);
-  }
-  
-  h2 {
-    font-size: var(--fs-1);
-    margin-bottom: 1rem;
-  }
-  
-  h3 {
-    font-size: var(--fs-2);
-  }
-  
-  h4 {
-    font-size: var(--fs-4);
-  }
-  
-  .article-title {
-    color: var(--orange-yellow-crayola);
-    font-size: var(--fs-1);
-  }
-  
-  .about-text {
-    color: var(--light-gray);
-    font-size: var(--fs-4);
-    line-height: 1.6;
-  }
-  
-  .contact-title {
-    color: var(--light-gray);
-    font-size: var(--fs-4);
-    font-weight: var(--fw-300);
-  }
-  
-  .contact-info {
-    display: flex;
-    gap: 1rem;
-  }
-  
-  .contact-link {
-    color: var(--white-1);
-  }
-  
-  /*-----------------------------------*\
-    #FORMS & BUTTONS
-  \*-----------------------------------*/
-  
-  .form-input {
-    color: var(--white-1);
-    background: var(--eerie-black-2);
-    padding: 0.75rem 1rem;
-    border: 1px solid var(--jet);
+    flex-wrap: wrap;
+}
+
+.project {
+    background-color: #fff;
+    padding: 20px;
     border-radius: 8px;
-    font-size: var(--fs-5);
-    margin-bottom: 1rem;
-  }
-  
-  .form-input:focus {
-    border-color: var(--orange-yellow-crayola);
-  }
-  
-  .form-btn {
-    background: var(--onyx);
-    color: var(--orange-yellow-crayola);
-    padding: 0.75rem 1rem;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 30%;
+    margin-bottom: 20px;
+}
+
+.contact-section {
+    background-color: #ecf0f1;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #2c3e50;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.footer a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    color: #3498db;
+}
+
+/* Resume Section */
+.resume-section {
+    padding: 60px 20px;
+    text-align: center;
+    background-color: #ecf0f1;
+}
+
+.resume-section h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.resume-section p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.resume-section .btn {
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.resume-section .btn:hover {
+    background-color: #2980b9;
+}
+
+.resume-image {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.resume-image img {
+    max-width: 50%; /* Limit the width of the image to 20% of the container */
+    max-height: 50%; /* Maintain the aspect ratio */
+    border: 2px solid #ccc;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
-    cursor: pointer;
-    font-size: var(--fs-5);
-    transition: background var(--transition-1);
-  }
-  
-  .form-btn:hover {
-    background: var(--orange-yellow-crayola);
-    color: var(--smoky-black);
-  }
-  
-  /*-----------------------------------*\
-    #RESPONSIVE STYLES
-  \*-----------------------------------*/
-  
-  @media (min-width: 768px) {
-    main {
-      flex-direction: row;
-      gap: 2rem;
-    }
-    
-    .sidebar,
-    article {
-      padding: 2rem;
-      max-width: 300px;
-    }
-  
-    .navbar {
-      justify-content: space-between;
-    }
-  }
-  
+}
