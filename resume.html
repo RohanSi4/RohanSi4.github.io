@@ -1,176 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rohan Singh - Resume</title>
-
-  <!-- Favicon -->
-  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css">
-
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume - Rohan Singh</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
-
 <body>
 
-  <main>
-
-    <!-- Sidebar -->
-    <aside class="sidebar" data-sidebar>
-      <div class="sidebar-info">
-        <figure class="avatar-box">
-          <img src="./assets/images/rohan-avatar.png" alt="Rohan Singh" width="80">
-        </figure>
-        <div class="info-content">
-          <h1 class="name">Rohan Singh</h1>
-          <p class="title">Software Engineer</p>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">Rohan Singh</a>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+            </ul>
         </div>
-        <button class="info_more-btn" data-sidebar-btn>
-          <span>Show Contacts</span>
-          <ion-icon name="chevron-down"></ion-icon>
-        </button>
-      </div>
-      <div class="sidebar-info_more">
-        <div class="separator"></div>
-        <ul class="contacts-list">
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="mail-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Email</p>
-              <a href="mailto:Rohan.singh04@outlook.com" class="contact-link">Rohan.singh04@outlook.com</a>
+    </nav>
+
+    <!-- Resume Section -->
+    <section class="resume-section">
+        <div class="container">
+            <h1>My Resume</h1>
+            <p>Below is a copy of my resume. You can also <a href="rohanresume.pdf" class="btn">Download PDF</a> for a high-resolution version.</p>
+            <div class="resume-image">
+                <img src="rohanresumeLIS.jpg" alt="Rohan Singh's Resume">
             </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="phone-portrait-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Phone</p>
-              <a href="tel:+12403867502" class="contact-link">(240) 386-7502</a>
-            </div>
-          </li>
-          <li class="contact-item">
-            <div class="icon-box"><ion-icon name="location-outline"></ion-icon></div>
-            <div class="contact-info">
-              <p class="contact-title">Location</p>
-              <address>University of Virginia, USA</address>
-            </div>
-          </li>
-        </ul>
-        <div class="separator"></div>
-        <ul class="social-list">
-          <li class="social-item"><a href="https://linkedin.com/in/rohansingh4" class="social-link"><ion-icon name="logo-linkedin"></ion-icon></a></li>
-          <li class="social-item"><a href="https://github.com/rohansi4" class="social-link"><ion-icon name="logo-github"></ion-icon></a></li>
-        </ul>
-      </div>
-    </aside>
+        </div>
+    </section>
 
-    <!-- Main Content -->
-    <div class="main-content">
-
-      <!-- Navbar -->
-      <nav class="navbar">
-        <ul class="navbar-list">
-          <li class="navbar-item"><button class="navbar-link active" data-nav-link>Resume</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Projects</button></li>
-          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
-        </ul>
-      </nav>
-
-      <!-- Resume Content -->
-      <article class="resume active" data-page="resume">
-        <header>
-          <h2 class="h2 article-title">Resume</h2>
-        </header>
-
-        <!-- Education Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="book-outline"></ion-icon></div>
-            <h3 class="h3">Education</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">University of Virginia</h4>
-              <span>2024 — Present</span>
-              <p class="timeline-text">BS in Computer Science, Minor in Data Science, GPA: 4.0</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">University of Wisconsin-Madison</h4>
-              <span>2022 — 2024</span>
-              <p class="timeline-text">BS in Computer Science, GPA: 3.73</p>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Experience Section -->
-        <section class="timeline">
-          <div class="title-wrapper">
-            <div class="icon-box"><ion-icon name="briefcase-outline"></ion-icon></div>
-            <h3 class="h3">Experience</h3>
-          </div>
-          <ol class="timeline-list">
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Software Engineer Intern</h4>
-              <span>Summer 2024</span>
-              <p class="timeline-text">Cubic Corporation, Phoenix team. Built a user guide website and implemented CI/CD pipelines with AWS and Terraform.</p>
-            </li>
-            <li class="timeline-item">
-              <h4 class="h4 timeline-item-title">Fullstack Software Engineering Intern</h4>
-              <span>Spring 2024</span>
-              <p class="timeline-text">USCHO Remote. Contributed to the development of a high-traffic website using Vue.js, Laravel, and Inertia.js.</p>
-            </li>
-          </ol>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skill">
-          <h3 class="h3 skills-title">Technical Skills</h3>
-          <ul class="skills-list content-card">
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">Python</h5>
-                <data value="90">90%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 90%;"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">JavaScript</h5>
-                <data value="80">80%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 80%;"></div>
-              </div>
-            </li>
-            <li class="skills-item">
-              <div class="title-wrapper">
-                <h5 class="h5">React & Node.js</h5>
-                <data value="85">85%</data>
-              </div>
-              <div class="skill-progress-bg">
-                <div class="skill-progress-fill" style="width: 85%;"></div>
-              </div>
-            </li>
-          </ul>
-        </section>
-
-      </article>
-
-    </div>
-  </main>
-
-  <!-- Custom JS -->
-  <script src="./assets/js/script.js"></script>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <a href="https://www.linkedin.com/in/rohansingh4/">Visit My LinkedIn!</a>
+        </div>
+    </footer>
 
 </body>
-
 </html>
