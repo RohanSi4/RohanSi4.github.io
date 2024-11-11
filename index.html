@@ -1,81 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohan Singh - Software Developer</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rohan Singh - Portfolio</title>
+
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./assets/images/logo.ico" type="image/x-icon">
+
+  <!-- Custom CSS Link -->
+  <link rel="stylesheet" href="./assets/css/style.css">
+
+  <!-- Google Font Link -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
+
 <body>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="container">
-            <a href="#" class="logo">Rohan Singh</a>
-            <ul class="nav-links">
-                <li><a href="#about">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <li><a href="resume.html">Resume</a></li>
-            </ul>
-        </div>
-    </nav>
+  <!-- Main Section -->
+  <main>
 
-    <!-- Hero Section -->
-    <header class="hero-section">
-        <div class="container hero-content">
-            <h1>Hi, I'm Rohan Singh</h1>
-            <p>A passionate software developer with a focus on AI, Machine Learning, and Web Development.</p>
-            <a href="resume.html" class="btn">View Resume</a>
-            <a href="#about" class="scroll-link">Scroll Down</a>
-        </div>
-        <div class="hero-image">
-            <img src="gradpic.jpeg" alt="Rohan Singh" class="profile-pic"> <!-- Ensure correct image path -->
-        </div>
-    </header>
+    <!-- Sidebar -->
+    <aside class="sidebar" data-sidebar>
+      <div class="sidebar-info">
 
-    <!-- About Section -->
-    <section id="about" class="about-section fade-in-section">
-        <div class="container">
-            <h2>About Me</h2>
-            <p>I'm a Computer Science student at the University of Virginia with a passion for software development. I love working on AI/ML projects, learning new technologies, and bringing innovative ideas to life.</p>
-        </div>
-    </section>
+        <figure class="avatar-box">
+          <img src="./assets/images/my-avatar.png" alt="Rohan Singh" width="80">
+        </figure>
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section fade-in-section">
-        <div class="container">
-            <h2>Projects</h2>
-            <div class="project-grid">
-                <div class="project">
-                    <h3>Stock Prediction Project</h3>
-                    <p>A machine learning project to classify buy/sell stock signals using KNN and regression models.</p>
-                </div>
-                <div class="project">
-                    <h3>Phoenix App Development</h3>
-                    <p>A full-stack project for tracking devices through production and stress testing, built during my internship at Cubic Corporation.</p>
-                </div>
+        <div class="info-content">
+          <h1 class="name" title="Rohan Singh">Rohan Singh</h1>
+          <p class="title">Software Engineer</p>
+        </div>
+
+        <button class="info_more-btn" data-sidebar-btn>
+          <span>Show Contacts</span>
+          <ion-icon name="chevron-down"></ion-icon>
+        </button>
+
+      </div>
+
+      <div class="sidebar-info_more">
+        <div class="separator"></div>
+        <ul class="contacts-list">
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="mail-outline"></ion-icon>
             </div>
-        </div>
-    </section>
+            <div class="contact-info">
+              <p class="contact-title">Email</p>
+              <a href="mailto:Rohan.singh04@outlook.com" class="contact-link">Rohan.singh04@outlook.com</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="phone-portrait-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Phone</p>
+              <a href="tel:+12403867502" class="contact-link">(240) 386-7502</a>
+            </div>
+          </li>
+          <li class="contact-item">
+            <div class="icon-box">
+              <ion-icon name="location-outline"></ion-icon>
+            </div>
+            <div class="contact-info">
+              <p class="contact-title">Location</p>
+              <address>Charlottesville, Virginia, USA</address>
+            </div>
+          </li>
+        </ul>
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section fade-in-section">
-        <div class="container">
-            <h2>Contact Me</h2>
-            <p>Feel free to reach out if you'd like to collaborate on a project or just have a chat!</p>
-            <a href="mailto:rohansingh@example.com" class="btn">Email Me</a>
-        </div>
-    </section>
+        <div class="separator"></div>
+        <ul class="social-list">
+          <li class="social-item">
+            <a href="https://www.linkedin.com/in/rohansingh4/" class="social-link">
+              <ion-icon name="logo-linkedin"></ion-icon>
+            </a>
+          </li>
+          <li class="social-item">
+            <a href="https://rohansi4.github.io/" class="social-link">
+              <ion-icon name="logo-github"></ion-icon>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </aside>
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <p>© 2024 Rohan Singh. All Rights Reserved.</p>
-        </div>
-    </footer>
+    <!-- Main Content -->
+    <div class="main-content">
 
-    <!-- JavaScript -->
-    <script src="script.js"></script>
+      <!-- Navbar -->
+      <nav class="navbar">
+        <ul class="navbar-list">
+          <li class="navbar-item"><button class="navbar-link active" data-nav-link>About</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Resume</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Portfolio</button></li>
+          <li class="navbar-item"><button class="navbar-link" data-nav-link>Contact</button></li>
+        </ul>
+      </nav>
+
+      <!-- About Section -->
+      <article class="about active" data-page="about">
+        <header>
+          <h2 class="h2 article-title">About Me</h2>
+        </header>
+        <section class="about-text">
+          <p>
+            Hi, I'm Rohan Singh, a Software Engineer specializing in web development, AI, and data science. I'm currently a student at the University of Virginia, involved in organizations like Technology Strategy Group and HooHacks.
+          </p>
+          <p>
+            With internship experience at Cubic Corporation and USCHO, I have a solid background in full-stack development, CI/CD, and data-driven applications. I’m passionate about creating efficient and scalable solutions.
+          </p>
+        </section>
+      </article>
+
+      <!-- Services Section -->
+      <section class="service">
+        <h3 class="h3 service-title">What I'm Doing</h3>
+        <ul class="service-list">
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-dev.svg" alt="Web development icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Web Development</h4>
+              <p class="service-item-text">High-quality development of responsive websites and applications.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-ai.svg" alt="AI icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Machine Learning</h4>
+              <p class="service-item-text">Building and deploying AI models for real-world applications.</p>
+            </div>
+          </li>
+          <li class="service-item">
+            <div class="service-icon-box">
+              <img src="./assets/images/icon-cloud.svg" alt="Cloud icon" width="40">
+            </div>
+            <div class="service-content-box">
+              <h4 class="h4 service-item-title">Cloud Computing</h4>
+              <p class="service-item-text">Designing scalable cloud architectures on AWS and GCP.</p>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- Portfolio Section -->
+      <article class="portfolio" data-page="portfolio">
+        <header>
+          <h2 class="h2 article-title">Portfolio</h2>
+        </header>
+        <section class="projects">
+          <ul class="project-list">
+            <li class="project-item" data-filter-item data-category="AI">
+              <a href="#">
+                <h3 class="project-title">AI-Powered Stock Predictor</h3>
+                <p class="project-category">AI and Machine Learning</p>
+              </a>
+            </li>
+            <li class="project-item" data-filter-item data-category="Web Development">
+              <a href="#">
+                <h3 class="project-title">BusWatch</h3>
+                <p class="project-category">Web Development</p>
+              </a>
+            </li>
+          </ul>
+        </section>
+      </article>
+
+      <!-- Contact Section -->
+      <article class="contact" data-page="contact">
+        <header>
+          <h2 class="h2 article-title">Contact</h2>
+        </header>
+        <section class="contact-form">
+          <h3 class="h3 form-title">Contact Form</h3>
+          <form action="#" class="form" data-form>
+            <div class="input-wrapper">
+              <input type="text" name="fullname" placeholder="Full name" required>
+              <input type="email" name="email" placeholder="Email address" required>
+            </div>
+            <textarea name="message" placeholder="Your Message" required></textarea>
+            <button type="submit" disabled>Send Message</button>
+          </form>
+        </section>
+      </article>
+
+    </div>
+
+  </main>
+
+  <!-- Custom JavaScript -->
+  <script src="./assets/js/script.js"></script>
+  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
 </body>
+
 </html>
