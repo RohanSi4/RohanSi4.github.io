@@ -5,146 +5,127 @@
     box-sizing: border-box;
 }
 
-/* Body */
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: Arial, sans-serif;
     line-height: 1.6;
-    color: #2c3e50;
-    background-color: #f9f9f9;
-    padding-top: 60px; /* Offset for fixed navbar */
+    background-color: #f4f4f4;
+    color: #333;
 }
 
-/* Navbar */
-.navbar {
+/* Header */
+.header {
     background: #2c3e50;
     color: #fff;
     padding: 10px 20px;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    z-index: 1000;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
 }
 
-.navbar .logo {
-    font-size: 1.5rem;
+.header nav a {
+    color: #fff;
+    text-decoration: none;
+    margin: 0 10px;
     font-weight: bold;
-    color: #fff;
-    text-decoration: none;
 }
 
-.nav-links {
-    list-style: none;
-    display: flex;
-    gap: 20px;
-}
-
-.nav-links a {
-    color: #fff;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
-}
-
-.nav-links a:hover {
-    color: #3498db;
+.header nav a:hover {
+    text-decoration: underline;
 }
 
 /* Hero Section */
-.hero-section {
-    height: 100vh;
-    background: linear-gradient(135deg, #3498db, #2c3e50);
-    color: #fff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.hero {
     text-align: center;
+    padding: 50px;
+    background: linear-gradient(to bottom, #2c3e50, #3498db);
+    color: white;
 }
 
-.hero-section h1 {
-    font-size: 3rem;
-    margin-bottom: 1rem;
-}
-
-.hero-section p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.hero-section .btn {
-    background: #fff;
-    color: #3498db;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: background 0.3s ease, color 0.3s ease;
-}
-
-.hero-section .btn:hover {
-    background: #2980b9;
-    color: #fff;
-}
-
-/* Sections */
-section {
-    padding: 60px 20px;
-}
-
-.container {
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-h2 {
-    font-size: 2rem;
+.hero .profile-pic {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
     margin-bottom: 20px;
-    color: #2c3e50;
-    border-bottom: 2px solid #3498db;
-    display: inline-block;
-    padding-bottom: 5px;
+    border: 3px solid white;
 }
 
-/* Projects */
-.project {
-    margin: 20px 0;
+.hero h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+/* About Section */
+.about, .timeline, .projects, .certifications, .github, .contact {
     padding: 20px;
+    margin: 20px 0;
     background: #fff;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.project:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project h3 {
-    color: #3498db;
-}
-
-/* Footer */
-footer {
-    background: #2c3e50;
-    color: #fff;
+.about h2, .timeline h2, .projects h2, .certifications h2, .github h2, .contact h2 {
     text-align: center;
-    padding: 10px 0;
-    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-/* Animations */
-.fade-in {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInUp 0.8s ease forwards;
+/* Timeline */
+.timeline .timeline-item {
+    margin: 15px 0;
+    padding-left: 10px;
+    border-left: 3px solid #3498db;
 }
 
-@keyframes fadeInUp {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.timeline .timeline-item h3 {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+/* Projects */
+.projects .project {
+    margin: 15px 0;
+    padding: 10px;
+    border: 2px solid #3498db;
+    border-radius: 8px;
+}
+
+/* Certifications */
+.certifications .certification-grid {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.certifications .certification img {
+    width: 100px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+/* GitHub Section */
+.github .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.github .btn:hover {
+    background: #2980b9;
+}
+
+/* Contact Section */
+.contact p a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.contact p a:hover {
+    text-decoration: underline;
 }
