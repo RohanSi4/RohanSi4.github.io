@@ -1,4 +1,4 @@
-/* Reset */
+/* General Reset */
 * {
     margin: 0;
     padding: 0;
@@ -7,66 +7,90 @@
 
 /* Body */
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     line-height: 1.6;
-    color: #333;
+    color: #2c3e50;
+    background-color: #f9f9f9;
+    padding-top: 60px; /* Offset for fixed navbar */
 }
 
 /* Navbar */
 .navbar {
-    background: #333;
+    background: #2c3e50;
     color: #fff;
     padding: 10px 20px;
     position: fixed;
     width: 100%;
     top: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .navbar .logo {
-    font-size: 24px;
-    text-transform: uppercase;
+    font-size: 1.5rem;
     font-weight: bold;
+    color: #fff;
+    text-decoration: none;
 }
 
 .nav-links {
     list-style: none;
     display: flex;
-    justify-content: flex-end;
-}
-
-.nav-links li {
-    margin: 0 15px;
+    gap: 20px;
 }
 
 .nav-links a {
     color: #fff;
     text-decoration: none;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: #3498db;
 }
 
 /* Hero Section */
 .hero-section {
     height: 100vh;
+    background: linear-gradient(135deg, #3498db, #2c3e50);
+    color: #fff;
     display: flex;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(to bottom right, #3498db, #2c3e50);
-    color: #fff;
     text-align: center;
 }
 
 .hero-section h1 {
     font-size: 3rem;
-    margin-bottom: 10px;
+    margin-bottom: 1rem;
 }
 
 .hero-section p {
     font-size: 1.2rem;
+    margin-bottom: 1.5rem;
 }
 
-/* Section Styling */
+.hero-section .btn {
+    background: #fff;
+    color: #3498db;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.hero-section .btn:hover {
+    background: #2980b9;
+    color: #fff;
+}
+
+/* Sections */
 section {
-    padding: 50px 20px;
+    padding: 60px 20px;
 }
 
 .container {
@@ -74,34 +98,53 @@ section {
     margin: 0 auto;
 }
 
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color: #2c3e50;
+    border-bottom: 2px solid #3498db;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+/* Projects */
 .project {
     margin: 20px 0;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.project:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project h3 {
-    font-size: 1.5rem;
-    margin-bottom: 5px;
+    color: #3498db;
 }
 
 /* Footer */
 footer {
-    background: #333;
+    background: #2c3e50;
     color: #fff;
     text-align: center;
     padding: 10px 0;
     margin-top: 20px;
 }
 
-/* Buttons */
-.btn {
-    background: #3498db;
-    color: #fff;
-    padding: 10px 20px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-size: 1rem;
+/* Animations */
+.fade-in {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 0.8s ease forwards;
 }
 
-.btn:hover {
-    background: #2980b9;
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
