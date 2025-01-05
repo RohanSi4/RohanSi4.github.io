@@ -171,36 +171,35 @@ header nav a:hover {
 }
 
 .certification-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 20px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
+    gap: 20px;
 }
 
 .certification {
     display: flex;
     align-items: center;
-    justify-content: start;
-    padding: 15px;
     background-color: #FFF;
+    padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    gap: 15px;
+    width: 350px;
+    text-align: left;
 }
 
 .certification img {
-    width: 80px;
-    height: 80px;
-    object-fit: contain;
-    border-radius: 5px;
+    width: 100px;
+    height: 100px;
+    margin-right: 20px;
+    flex-shrink: 0;
 }
 
 .certification p {
+    margin: 0;
     font-size: 1rem;
     color: #333;
-    margin: 0;
-    text-align: left;
+    line-height: 1.5;
 }
 
 /* GitHub Section */
