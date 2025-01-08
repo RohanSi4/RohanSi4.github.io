@@ -16,21 +16,15 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Centered Hero Title */
-.hero-title {
+/* Centered Header */
+.main-header {
     text-align: center;
-    font-size: 2.5rem;
-    color: #FFFFFF; /* Light text */
-    background-color: #121212; /* Darker background */
     padding: 20px;
-    margin: 0 auto; /* Center horizontally */
-    width: 100%; /* Ensure it spans the entire width */
-    display: flex; /* Use flexbox for alignment */
-    justify-content: center; /* Center horizontally */
-    align-items: center; /* Center vertically */
+    background-color: #121212; /* Slightly darker header background */
+    color: #FFFFFF;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for header */
+    font-size: 2.5rem;
 }
-
 
 /* Hero Section */
 .hero {
@@ -54,14 +48,13 @@ a:hover {
     margin-bottom: 20px;
 }
 
-.hero h2 {
+/* Name Section (Remove Black Background) */
+.hero-name {
     font-size: 2.5rem;
-    margin: 10px 0;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin: 10px 0;
+    margin: 20px 0;
+    color: #FFFFFF;
+    background: none; /* Remove any background color */
+    padding: 0; /* Remove padding */
 }
 
 /* About Section */
