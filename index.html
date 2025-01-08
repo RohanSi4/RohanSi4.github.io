@@ -93,11 +93,9 @@
         <p>Here you can find some of my work!</p>
         <a href="https://github.com/RohanSi4" class="btn">Visit My GitHub</a>
 
-        <div id="github-activity" class="github-activity">
-            <h3>Recent Commit Activity</h3>
-            <ul id="commit-list">
-                <!-- Recent commits will be dynamically loaded here -->
-            </ul>
+        <div id="github-contributions" class="github-contributions">
+            <h3>My GitHub Contributions</h3>
+            <img src="https://ghchart.rshah.org/00cc99/RohanSi4" alt="GitHub Contributions Chart">
         </div>
     </section>
 
@@ -111,48 +109,5 @@
     <footer>
         <p>&copy; 2025 Rohan Singh</p>
     </footer>
-
-    <script>
-        async function fetchGitHubCommits() {
-            const username = "RohanSi4"; // Your GitHub username
-            const apiUrl = `https://api.github.com/users/${username}/events`;
-
-            try {
-                const response = await fetch(apiUrl);
-
-                if (!response.ok) {
-                    throw new Error("Failed to fetch GitHub data");
-                }
-
-                const data = await response.json();
-
-                const commitList = document.getElementById("commit-list");
-                commitList.innerHTML = ""; // Clear any existing data
-
-                // Filter for push events
-                const pushEvents = data.filter(event => event.type === "PushEvent");
-
-                pushEvents.slice(0, 5).forEach(event => {
-                    event.payload.commits.forEach(commit => {
-                        const commitItem = document.createElement("li");
-                        commitItem.innerHTML = `
-                            <p>
-                                <strong>Repo:</strong> <a href="https://github.com/${event.repo.name}" target="_blank">${event.repo.name}</a><br>
-                                <strong>Message:</strong> ${commit.message}<br>
-                                <strong>Date:</strong> ${new Date(event.created_at).toLocaleString()}
-                            </p>
-                        `;
-                        commitList.appendChild(commitItem);
-                    });
-                });
-            } catch (error) {
-                console.error("Error fetching GitHub data:", error);
-                const commitList = document.getElementById("commit-list");
-                commitList.innerHTML = "<li>Unable to load GitHub activity.</li>";
-            }
-        }
-
-        fetchGitHubCommits();
-    </script>
 </body>
 </html>
