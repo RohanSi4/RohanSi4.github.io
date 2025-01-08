@@ -2,7 +2,7 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark background */
+    background-color: #000000; /* Dark background */
     color: #FFFFFF; /* Light text */
     line-height: 1.6;
 }
@@ -16,11 +16,41 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Static Header */
+header {
+    position: relative; /* Changed to static positioning */
+    background-color: #121212; /* Darker header background */
+    color: #FFFFFF;
+    padding: 10px 20px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for header */
+}
+
+header h1 {
+    margin: 0;
+    font-size: 1.8rem;
+}
+
+header nav {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+header nav a {
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1rem;
+}
+
+header nav a:hover {
+    color: #18BC9C;
+}
+
 /* Hero Section */
 .hero {
     text-align: center;
     padding: 60px 20px;
-    background-color: #1E1E1E; /* Darker background for hero section */
+    background-color: #1E1E1E; /* Darker hero background */
     color: #FFFFFF;
 }
 
@@ -33,7 +63,7 @@ a:hover {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    border: 4px solid #18BC9C; /* Accentuated teal border */
+    border: 4px solid #18BC9C; /* Teal border */
     object-fit: cover;
     margin-bottom: 20px;
 }
@@ -58,7 +88,7 @@ a:hover {
 .about {
     padding: 40px 20px;
     text-align: center;
-    background-color: #1E1E1E; /* Dark section background */
+    background-color: #121212; /* Darker section background */
     color: #FFFFFF;
 }
 
@@ -77,8 +107,7 @@ a:hover {
 /* Timeline Section */
 .timeline {
     padding: 40px 20px;
-    background-color: #1C1C1C; /* Darker timeline section */
-    color: #FFFFFF;
+    background-color: #1E1E1E; /* Darker section background */
     text-align: center;
 }
 
@@ -93,14 +122,15 @@ a:hover {
     max-width: 600px;
     text-align: left;
     padding: 20px;
-    background-color: #2A2A2A; /* Slightly lighter card */
+    background-color: #121212; /* Dark background for timeline items */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
 }
 
 .timeline-item h3 {
     margin: 0;
-    color: #1E90FF;
+    color: #1E90FF; /* Light blue text for titles */
     font-size: 1.3rem;
 }
 
@@ -111,9 +141,8 @@ a:hover {
 /* Projects Section */
 .projects {
     padding: 40px 20px;
-    background-color: #1E1E1E;
+    background-color: #121212; /* Darker background */
     text-align: center;
-    color: #FFFFFF;
 }
 
 .projects h2 {
@@ -126,10 +155,11 @@ a:hover {
     margin: 20px auto;
     max-width: 600px;
     padding: 20px;
-    background-color: #2A2A2A;
+    background-color: #1E1E1E; /* Darker project cards */
     border-radius: 8px;
     border: 2px solid #18BC9C;
     text-align: left;
+    color: #FFFFFF;
 }
 
 .project h3 {
@@ -145,7 +175,7 @@ a:hover {
 /* Certifications Section */
 .certifications {
     padding: 40px 20px;
-    background-color: #1C1C1C;
+    background-color: #1E1E1E; /* Darker background */
     text-align: center;
 }
 
@@ -182,7 +212,7 @@ a:hover {
 /* GitHub Section */
 .github {
     padding: 40px 20px;
-    background-color: #1E1E1E;
+    background-color: #121212; /* Darker background */
     text-align: center;
 }
 
@@ -210,14 +240,14 @@ a:hover {
 }
 
 .github a:hover {
-    background-color: #4682B4;
+    background-color: #18BC9C;
 }
 
 /* GitHub Activity Section */
 .github-activity {
     margin-top: 30px;
     padding: 20px;
-    background-color: #2A2A2A;
+    background-color: #1E1E1E; /* Darker section background */
     border-radius: 8px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
     text-align: left;
@@ -239,10 +269,11 @@ a:hover {
 
 .github-activity ul li {
     margin-bottom: 15px;
-    background-color: #2A2A2A;
+    background-color: #121212; /* Darker items */
     padding: 15px;
     border-radius: 5px;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    color: #FFFFFF;
 }
 
 .github-activity ul li p {
@@ -262,9 +293,8 @@ a:hover {
 /* Contact Section */
 .contact {
     padding: 40px 20px;
-    background-color: #1C1C1C;
+    background-color: #1E1E1E; /* Darker background */
     text-align: center;
-    color: #FFFFFF;
 }
 
 .contact h2 {
@@ -285,7 +315,7 @@ a:hover {
 
 /* Footer */
 footer {
-    background-color: #121212;
+    background-color: #121212; /* Darker footer */
     color: #FFFFFF;
     text-align: center;
     padding: 10px 0;
