@@ -23,9 +23,14 @@ a:hover {
     color: #FFFFFF; /* Light text */
     background-color: #121212; /* Darker background */
     padding: 20px;
-    margin: 0;
+    margin: 0 auto; /* Center horizontally */
+    width: 100%; /* Ensure it spans the entire width */
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5); /* Shadow for header */
 }
+
 
 /* Hero Section */
 .hero {
