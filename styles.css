@@ -203,17 +203,19 @@ a:hover {
 
 /* Specific adjustments for Oracle and Databricks */
 img[alt="Oracle"] {
-    width: 600px;  /* Tripled from 200px */
-    height: 600px; /* Tripled from 200px */
+    width: 400px;  /* Reduced from 600px */
+    height: 400px; /* Reduced from 600px */
     object-position: center;
     padding: 20px;
+    margin-top: -100px; /* Shift upward to align with other images */
 }
 
 img[alt="Databricks"] {
-    width: 400px;  /* Doubled from 200px */
-    height: 400px; /* Doubled from 200px */
+    width: 300px;  /* Reduced from 400px */
+    height: 300px; /* Reduced from 400px */
     object-position: center;
     padding: 15px;
+    margin-top: -50px; /* Shift upward to align with other images */
 }
 
 img[alt="PCAP"] {
