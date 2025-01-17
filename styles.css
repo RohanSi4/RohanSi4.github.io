@@ -221,23 +221,7 @@ a:hover {
     font-size: 0.9rem;
 }
 
-/* Specific adjustments for Oracle and Databricks */
-img[alt="Oracle"] {
-    width: 400px;  /* Reduced from 600px */
-    height: 400px; /* Reduced from 600px */
-    object-position: center;
-    padding: 20px;
-    margin-top: -100px; /* Shift upward to align with other images */
-}
-
-img[alt="Databricks"] {
-    width: 300px;  /* Reduced from 400px */
-    height: 300px; /* Reduced from 400px */
-    object-position: center;
-    padding: 15px;
-    margin-top: -50px; /* Shift upward to align with other images */
-}
-
+/* Only keep specific padding for PCAP if needed */
 img[alt="PCAP"] {
     padding: 5px;
 }
