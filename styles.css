@@ -311,14 +311,14 @@ html {
 }
 
 .social-icon {
-    font-size: 2.5rem;  /* Increased from default size */
-    color: #18BC9C;     /* Your theme color */
+    font-size: 5rem;  /* Doubled from 2.5rem */
+    color: #18BC9C;     
     transition: all 0.3s ease;
 }
 
 .social-icon:hover {
-    color: #1E90FF;     /* Different color on hover */
-    transform: scale(1.1);  /* Slight grow effect on hover */
+    color: #1E90FF;     
+    transform: scale(1.1);  
 }
 
 /* Optional: Add specific colors for each platform */
@@ -328,4 +328,13 @@ html {
 
 .fa-github {
     color: #333;
+}
+
+.certification a {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.certification a:hover {
+    transform: translateY(-5px);
 }
