@@ -201,6 +201,26 @@ a:hover {
     margin-bottom: 10px;
 }
 
+.cert-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+    min-height: 80px;
+    justify-content: flex-start;
+}
+
+.cert-text h4 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.cert-text span {
+    color: #666;
+    font-size: 0.9rem;
+}
+
 /* Specific adjustments for Oracle and Databricks */
 img[alt="Oracle"] {
     width: 400px;  /* Reduced from 600px */
@@ -220,26 +240,6 @@ img[alt="Databricks"] {
 
 img[alt="PCAP"] {
     padding: 5px;
-}
-
-.cert-text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 0.5rem;
-    min-height: 80px;
-    justify-content: flex-start;
-}
-
-.cert-text h4 {
-    margin: 0;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-.cert-text span {
-    color: #666;
-    font-size: 0.9rem;
 }
 
 /* GitHub Section */
